@@ -9,7 +9,8 @@ node_modules
 /coverage
 
 # production
-/build
+/react/build
+/wasm/target
 
 # misc
 .DS_Store
