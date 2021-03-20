@@ -4,7 +4,7 @@ const HTMLWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
     mode: 'development',
     devtool: 'eval-source-map',
-    entry: './src/bootstrap.js',
+    entry: './src/index.js',
     output: {
         filename: 'bundle.js',
         path: path.resolve(__dirname, 'dist'),
@@ -22,6 +22,11 @@ module.exports = {
             },
             {
                 test: /\.ts$/,
+                use: 'babel-loader',
+                include: [path.resolve(__dirname, 'src')],
+            },
+                        {
+                test: /\.js$/,
                 use: 'babel-loader',
                 include: [path.resolve(__dirname, 'src')],
             }
