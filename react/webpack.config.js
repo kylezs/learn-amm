@@ -10,7 +10,7 @@ module.exports = {
         path: path.resolve(__dirname, 'dist'),
     },
     experiments: {
-        syncWebAssembly: true
+        asyncWebAssembly: true
     },
     module: {
         rules: [
