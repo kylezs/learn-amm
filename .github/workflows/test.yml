@@ -29,7 +29,9 @@ jobs:
         key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
 
     - name: Check formatting
+      working-directory: ./wasm
       run: cargo fmt -- --check
 
     - name: Run tests
+      working-directory: ./wasm
       run: cargo test --verbose
