@@ -4,13 +4,13 @@ const HTMLWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
     mode: 'development',
     devtool: 'eval-source-map',
-    entry: './src/index.js',
+    entry: './src/bootstrap.js',
     output: {
         filename: 'bundle.js',
         path: path.resolve(__dirname, 'dist'),
     },
     experiments: {
-        asyncWebAssembly: true
+        syncWebAssembly: true
     },
     module: {
         rules: [
