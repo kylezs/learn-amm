@@ -12,7 +12,8 @@ cargo install wasm-pack
 
 To build the Rust to Wasm so it's usable in React. 
 ```
-wasm-pack build --out-dir ../wasm-build
+cd wasm
+wasm-pack build
 ```
 
 To create a node_modules symlink to the /wasm-build folder (only need to run this once)
