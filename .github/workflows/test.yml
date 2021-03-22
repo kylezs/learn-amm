@@ -12,14 +12,13 @@ env:
   CARGO_TERM_COLOR: always
 
 jobs:
-  build:
+  test:
 
     runs-on: ubuntu-20.04
 
     steps:
-    - uses: actions/checkout@v2
-      with:
-        token: ${{ secrets.CI_PAT }} # CI_PAT is a secret that contains a personal access token for checking out private repos
+    - name: Checkout code
+      uses: actions/checkout@v2
         
     - uses: actions/cache@v2
       with:
